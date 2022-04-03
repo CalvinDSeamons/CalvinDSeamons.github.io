@@ -1,5 +1,29 @@
-body{
+html{
 
-    background-color: red;
+  height: 100%;
+}
+
+body {
+
+  height: 100%;
+  background-image: url('../images/background.jpg'); 
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
 
 }
+
+#login_widget {
+  background-color: black;
+  height: 120px;
+  width: 200px;
+  position: static;
+  border: 1px solid red;
+  opacity: 0.5;
+  top; 100px;
+  left; 100px;
+  color: white;
+}
+
