@@ -49,14 +49,33 @@
             75% { transform: translate(-2px, -2px) rotate(2deg); }
             100% { transform: translate(0, 0) rotate(0); }
         }
+        .header {
+            text-align: center;
+            background-color: transparent;
+            padding: 20px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            color: #cc5500; /* Burnt Orange */
+            margin: 0;
+        }
+
         .content {
             margin-left: 200px; /* Matches the width of the navbar */
-            padding: 10px;
+            padding: 20px;
+            flex: 1; /* Pushes the footer to the bottom */
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
         }
 
         marquee {
             font-size: 18px;
-            font-weight: bold;
         }
     </style>
     <link rel="stylesheet" type="test/css" href="css/main.css">
