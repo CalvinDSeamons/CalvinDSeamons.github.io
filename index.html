@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skibidi Toilet Town</title>
         <style>
-        /* Reset default margins */
+                /* Reset default margins */
         * {
             margin: 0;
             padding: 0;
@@ -19,6 +19,7 @@
             height: 100vh; /* Full viewport height */
         }
 
+        /* Sidebar (Nav Bar) */
         .sidebar {
             grid-row: 1 / 3;
             background-color: #333;
@@ -33,19 +34,38 @@
             color: white;
             text-decoration: none;
             text-align: center;
-            border-radius: 10px;
+            border-radius: 50% 0 20% 50%; /* Strange geometric shape */
             background-color: hsl(calc(360 * var(--i) / 20), 100%, 50%);
             transition: transform 0.2s;
         }
 
+        /* Violent Shaking Hover Effect */
         .sidebar a:hover {
-            transform: scale(1.1);
+            animation: shake 0.3s infinite;
+            transform: scale(1.2) rotate(10deg); /* Enlarge and rotate slightly */
         }
 
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-2deg); }
+            20% { transform: translate(-3px, 0px) rotate(2deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(2deg); }
+            50% { transform: translate(-1px, 2px) rotate(-2deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-2deg); }
+            80% { transform: translate(-1px, -1px) rotate(2deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-2deg); }
+        }
+
+        /* Main Page */
         .mainpage {
             grid-column: 2;
             grid-row: 1;
-            background-color: #222;
+            background-color: #444;
+            background-image: url('your-background-image.jpg'); /* Replace with your image */
+            background-repeat: repeat;
             padding: 20px;
             overflow-y: auto;
         }
@@ -57,17 +77,16 @@
             margin-bottom: 20px;
         }
 
+        /* Footer */
         footer {
             grid-column: 1 / 3;
-            background-color: #333;
+            background-color: #222;
             color: white;
             text-align: center;
             padding: 10px 0;
         }
-
         footer marquee {
             font-size: 18px;
-            font-weight: bold;
         }
     </style>
     <link rel="stylesheet" type="test/css" href="css/main.css">
@@ -100,7 +119,12 @@
         </marquee>
     
         <marquee behavior="scroll" direction="right" style="color: blue;" scrollamount="1">
-        🐟        🐟         🐟🐟🐟🐟           🐟                🐟🐟                      🐟🐟
+            🍋🤪🌛🌗🦓😗🤨🦅🐨🦆🦈😞🍌🍋🐻🌚🌴🌝🐤🍈🍑🍃🌌😪🍍🌱😍👺😂😤😧😲🥺🐆😍🧐🌺🌿🐢😑🦠🌕🌴🌱🌕😲🌛
+            🐳🌓🐊😲🐦🥰🦄🌾🦈🐵🐡🦗😶😋🤩🍂🌠🦎🌕🌞🐷🌛🦑🍃🐱🌜🤬🌚🍄🤣🍌🦕🦏😃🍈🐠😟🌼🌕🦠🙄🌛🍂🦝🦊🐦🍃
+            🤨🐢🐞🍄🍑😇😅🍁🐷🍍🍂🦗🌲🌜🌟😤🐦💀🍃🦝😝🐘🐋👿🌰🍊🌞🌕🍁😳👻🐠☠️🐱🐫🌎😔😋🌖🌎😶🥳🐴🍃🦆🌏🤐
+            🦇😦🍉😁🌼😋🌵🌍🦊🌕🍂🌵😚🐮🤔😀🐴😤🌿🐳😊😳🍂🦏💩🐦🍁🍒🌏🐵🐷🍁🦗🍉🦞🐙🦓😂🌷👺🐖
+            💩😌🦑🦄🍌🐼😅🦈🌗🍄😀🐮🌝🧐😉🍎😤🥳🥳🌕🐳🐏🦈🌏🐦🍍🐦😉🌑🌝🌴😑🐥😈🐢🌑🥰😜😤🌕🐫😏🦊🌝
+            🦆🥰🦞🥺🌙🍒😆🐧🐞😑🌕🌑🍎😟🌼😧🍋🍈🦗🦇🍃👹🐧🌱🦑🐯🐒😪🌏🦄
         </marquee>
     </footer>
     <div class="sidebar">
