@@ -9,6 +9,46 @@
             margin: 0;
             padding: 0;
         }
+        
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            margin: 5px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 50% 30% 20% 40%; /* Random geometric shapes */
+            background-color: hsl(calc(360 * var(--i) / 20), 100%, 50%); /* Clashing colors */
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #ff00ff; /* Extra clashing hover color */
+            animation: shake 0.2s infinite;
+        }
+
+        /* Violent shaking hover effect */
+        @keyframes shake {
+            0% { transform: translate(2px, -2px) rotate(-2deg); }
+            25% { transform: translate(-2px, 2px) rotate(2deg); }
+            50% { transform: translate(2px, 2px) rotate(-2deg); }
+            75% { transform: translate(-2px, -2px) rotate(2deg); }
+            100% { transform: translate(0, 0) rotate(0); }
+        }
     </style>
     <link rel="stylesheet" type="test/css" href="css/main.css">
 </head>
@@ -39,5 +79,29 @@
     <marquee behavior="scroll" direction="right" style="color: blue;" scrollamount="1">
     🐟        🐟         🐟🐟🐟🐟           🐟                🐟🐟                      🐟🐟
     </marquee>
+
+    <div class="sidebar">
+        <!-- Links with different colors -->
+        <a href="#" style="--i: 1;">Projects</a>
+        <a href="#" style="--i: 2;">Photos of Veggies</a>
+        <a href="#" style="--i: 3;">Ski Stuff</a>
+        <a href="#" style="--i: 4;">obarv</a>
+        <a href="#" style="--i: 5;">homework</a>
+        <a href="#" style="--i: 6;">resume stuff</a>
+        <a href="#" style="--i: 7;">stuff n' things </a>
+        <a href="#" style="--i: 8;">secrets</a>
+        <a href="#" style="--i: 9;">Stock Trading stuff</a>
+        <a href="#" style="--i: 10;">crypto</a>
+        <a href="#" style="--i: 11;">PepeCoin holdings</a>
+        <a href="#" style="--i: 12;">Runescape cheat codes</a>
+        <a href="#" style="--i: 13;">passwords</a>
+        <a href="#" style="--i: 14;">Mr Beast Flight Tracker</a>
+        <a href="#" style="--i: 15;">Splunk?</a>
+        <a href="#" style="--i: 16;">Favorite rocks</a>
+        <a href="#" style="--i: 17;">UFO/UAP</a>
+        <a href="#" style="--i: 18;">leaked classified government secrets</a>
+        <a href="#" style="--i: 19;">How to build a car bomb</a>
+        <a href="#" style="--i: 20;">favorite animals</a>
+    </div>
 
 </body>
