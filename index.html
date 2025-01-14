@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skibidi Toilet Town</title>
-    <style>
+        <style>
         /* Reset default margins */
         * {
             margin: 0;
@@ -13,83 +13,61 @@
         }
 
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             display: grid;
-            grid-template-columns: 200px 1fr; /* Sidebar + Content */
-            grid-template-rows: auto 1fr auto; /* Header + Content + Footer */
-            height: 100vh;
+            grid-template-columns: 200px 1fr; /* Sidebar and content */
+            grid-template-rows: 1fr auto; /* Main content and footer */
+            height: 100vh; /* Full viewport height */
         }
 
         .sidebar {
-            grid-row: 1 / 4; /* Span all rows (header, content, footer) */
+            grid-row: 1 / 3;
             background-color: #333;
-            padding: 0;
+            padding: 10px;
             overflow-y: auto;
         }
 
         .sidebar a {
             display: block;
+            margin: 10px 0;
             padding: 10px;
-            margin: 5px;
-            color: #fff;
+            color: white;
             text-decoration: none;
             text-align: center;
-            font-weight: bold;
-            border-radius: 50% 30% 20% 40%;
+            border-radius: 10px;
             background-color: hsl(calc(360 * var(--i) / 20), 100%, 50%);
-            transition: transform 0.2s, background-color 0.3s;
+            transition: transform 0.2s;
         }
 
         .sidebar a:hover {
-            background-color: #ff00ff;
-            animation: shake 0.2s infinite;
+            transform: scale(1.1);
         }
 
-        @keyframes shake {
-            0% { transform: translate(2px, -2px) rotate(-2deg); }
-            25% { transform: translate(-2px, 2px) rotate(2deg); }
-            50% { transform: translate(2px, 2px) rotate(-2deg); }
-            75% { transform: translate(-2px, -2px) rotate(2deg); }
-            100% { transform: translate(0, 0) rotate(0); }
-        }
-
-        .mainpage h1 {
-            grid-column: 2; /* Content column */
-            text-align: center;
-            background-color: transparent;
-            padding: 20px;
-            font-size: 3rem;
-            color: #cc5500; /* Burnt Orange */
-            margin: 0;
-        }
-
-         .mainpage {
-            grid-column: 2; /* Content column */
-            grid-row: 2; /* Main content area */
-            background-image: url('images/flowers.jpg'); /* Add your image path */
-            background-repeat: repeat; /* Repeats the image */
-            background-size: auto; /* Keeps the original size */
-            background-position: top left; /* Starts from the top-left corner */
+        .mainpage {
+            grid-column: 2;
+            grid-row: 1;
+            background-color: #444;
             padding: 20px;
             overflow-y: auto;
         }
 
-        .content {
-            grid-column: 2; /* Content column */
-            padding: 20px;
+        .mainpage h1 {
+            font-size: 3rem;
+            color: #cc5500; /* Burnt Orange */
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         footer {
-            grid-column: 1 / 3; /* Span across sidebar and content */
+            grid-column: 1 / 3;
             background-color: #333;
             color: white;
-            padding: 10px 20px;
             text-align: center;
+            padding: 10px 0;
         }
-        marquee {
+
+        footer marquee {
             font-size: 18px;
+            font-weight: bold;
         }
     </style>
     <link rel="stylesheet" type="test/css" href="css/main.css">
